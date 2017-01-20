@@ -16,9 +16,18 @@
 		<property name="userName" value="${activemq.userName}" />
 		<property name="password" value="${activemq.password}" />
 	</bean>
+	<!-- 池化session，connection，messageProducer -->
 	<bean id="pooledConnectionFactory" class="org.apache.activemq.jms.pool.PooledConnectionFactory">
 	<property name="connectionFactory" ref="targetConnectFactory"/>
 	<property name="maxConnections" value="${activemq.pool.maxConnections}"/>
 	</bean>
-	<bean></bean>
+	<!-- 把activemq交给spring管理 -->
+	<bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+	<property name="targetConnectionFactory" ref="pooledConnectionFactory"/>
+	</bean>
+	<!-- spring的模版类 -->
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+	<property name="connectionFactory" ref="connectionFactory"/>
+	<property name="defaultDestinationName" value="${activemq.queueName}"/>
+	</bean>
 </beans>

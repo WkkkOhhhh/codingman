@@ -1,38 +1,29 @@
 package com.codingman.www.active_producer;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.codingman.www.active_producer.entity.MqMail;
+import com.codingman.www.active_producer.mq.MqProducer;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+@ContextConfiguration(locations = { "classpath:spring-core.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+public class AppTest {
+	@Autowired
+	private MqProducer mqProducer;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void test1() {
+		MqMail mail = new MqMail();
+		mail.setTo("394759701@qq.com");
+		mail.setSubject("异步发邮件");
+		mail.setContext("这是一封从mq发来的文件");
+		mqProducer.sendMessage(mail);
+	}
 }
