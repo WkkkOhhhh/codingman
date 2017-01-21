@@ -12,8 +12,9 @@
 	default-autowire="byName" default-lazy-init="false">
 	<context:property-placeholder location="activemq.properties"/>
 	<!-- 配置自动扫描 -->
-	<context:component-scan base-package="com.codingman.www.active_producer"/>
+	<context:component-scan base-package="com.codingman.www.activemq_consumer"/>
 	<!-- 自动注解 -->
 	<context:annotation-config/>
 	<import resource="classpath:spring-activemq.xml"/>
+	<import resource="classpath:spring-mail.xml"/>
 	</beans>
