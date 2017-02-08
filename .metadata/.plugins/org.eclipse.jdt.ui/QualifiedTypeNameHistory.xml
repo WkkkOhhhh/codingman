@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.jms.ConnectionFactory"/>
+<fullyQualifiedTypeName name="javax.jms.Connection"/>
+<fullyQualifiedTypeName name="javax.jms.Session"/>
+<fullyQualifiedTypeName name="com.codingman.www.activemq_publish.publish.Publish.SinglePublish"/>
+<fullyQualifiedTypeName name="com.codingman.www.activemq_publish.publish.Publish"/>
+<fullyQualifiedTypeName name="org.apache.activemq.ActiveMQConnectionFactory"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="java.net.NetworkInterface"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.Dog"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.Animal"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo2.Circle"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo2.Square"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo2.Shape"/>
+<fullyQualifiedTypeName name="java.lang.Package"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo3.Child"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo3.Children"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo1.Cat"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo3.Parent"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo4.StaticIncr"/>
+<fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.digui.demo1.Leaf"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.gc.demo1.Chair"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.gc.demo1.Garbage"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo1.StaticPojo"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo2.ParentPojo"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo2.ChildPojo"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+</qualifiedTypeNameHistroy>

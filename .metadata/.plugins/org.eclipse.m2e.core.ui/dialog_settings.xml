@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\gitspace"/>
 			<item value="E:\gitspace\activemq-consumer"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -57,15 +58,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.codingman.www.active_producer"/>
-			<item value="com.codingman.www.activemq_consumer"/>
+			<item value="com.codingman.com.base_java"/>
 		</list>
 		<list key="groupId">
-			<item value="com.codingman.www"/>
+			<item value="com.codingman.com"/>
 		</list>
 		<list key="artifactId">
-			<item value="active_producer"/>
-			<item value="activemq-consumer"/>
+			<item value="base_java"/>
+			<item value=".base_java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
