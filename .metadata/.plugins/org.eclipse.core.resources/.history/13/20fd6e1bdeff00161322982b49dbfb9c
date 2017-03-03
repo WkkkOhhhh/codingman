@@ -1,5 +1,0 @@
-package com.codingman.com.base_java.memory;
-
-public class Memoizerl<A, V> implements Computable<A, V>{
-
-}

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;activemq-consumer&apos; to &apos;activemq_consumer&apos;" description="Rename resource &apos;activemq-consumer&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/activemq-consumer" name="activemq_consumer" stamp="1484814510368" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;active_producer&apos; to &apos;activemq_producer&apos;" description="Rename resource &apos;active_producer&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/active_producer" name="activemq_producer" stamp="1484814534387" updateReferences="true"/>
-</session>

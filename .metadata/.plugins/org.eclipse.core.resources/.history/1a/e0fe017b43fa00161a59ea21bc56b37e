@@ -1,9 +1,0 @@
-package com.coding.com.wechat;
-
-import javax.servlet.http.HttpServlet;
-
-public class TestServlet extends HttpServlet{
-
-
-
-}
