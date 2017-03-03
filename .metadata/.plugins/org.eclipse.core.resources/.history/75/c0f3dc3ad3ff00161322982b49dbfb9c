@@ -1,0 +1,7 @@
+package com.codingman.com.base_java.masterworker;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Master master=new Master(new Worker(),4);
+	}
+}

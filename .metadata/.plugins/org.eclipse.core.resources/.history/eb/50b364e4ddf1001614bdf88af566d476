@@ -1,0 +1,9 @@
+package com.codingman.com.base_java.abstractt.demo2;
+
+public abstract class Glyph {
+
+	public Glyph() {
+	System.out.println("Glyph before()");
+	}
+
+}

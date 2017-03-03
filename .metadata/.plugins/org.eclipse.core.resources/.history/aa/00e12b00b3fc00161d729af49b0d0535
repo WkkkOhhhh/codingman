@@ -1,0 +1,41 @@
+package com.codingman.com.base_java.thread.demo1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+public class ThreadMain {
+	public static void main(String[] args) {
+		PrintWriter pw=null;
+		try {
+		Thread[] threads=new Thread[10];
+		Thread.State[] status=new Thread.State[10];
+		for (int i = 0; i < 10; i++) {
+			threads[i]=new Thread(new Calculator(i));
+			if(i%2==0){
+				threads[i].setPriority(Thread.MAX_PRIORITY);
+			}else{
+				threads[i].setPriority(Thread.MIN_PRIORITY);
+			}
+			threads[i].setName("Thread:"+i);
+		}
+		File file=new File("thread.txt");
+			pw=new PrintWriter(file);
+			for (int i = 0; i < 10; i++) {
+			pw.println("Main:Status of Thread "+i+" : "+threads[i].getState());
+			}
+			for (int i=0; i<10; i++){
+			   threads[i].start();
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally {
+			if(pw!=null)
+			pw.close();
+		}
+	}
+}

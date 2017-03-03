@@ -1,0 +1,16 @@
+package com.codingman.com.base_java.masterworker;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class Master {
+	// 一个任务队列
+	private Queue<Object> concurrentLinkedQueue = new ConcurrentLinkedQueue<Object>();
+	//一个worker的map
+	private Map<String, Thread> wordMap=new HashMap<String, Thread>();
+	//worker线程的结果集
+	private Map<String, Thread> resultMap=new ConcurrentHashMap<String, Thread>();
+}

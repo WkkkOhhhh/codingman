@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Fri Feb 24 12:48:09 CST 2017
+org.eclipse.jst.j2ee.server\:/binary\:D\:\\apache-maven-3.3.9\\repo\\org\\apache\\logging\\log4j\\log4j-core\\2.0-rc1\\log4j-core-2.0-rc1.jar=E\:\\wechattomcat\\apache-tomcat-7.0.68\\webapps\\wechat\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar
+org.eclipse.jst.j2ee.server\:wechat=E\:\\wechattomcat\\apache-tomcat-7.0.68\\webapps\\wechat
+org.eclipse.jst.j2ee.server\:/binary\:D\:\\apache-maven-3.3.9\\repo\\org\\springframework\\spring-web\\4.2.3.RELEASE\\spring-web-4.2.3.RELEASE.jar=E\:\\wechattomcat\\apache-tomcat-7.0.68\\webapps\\wechat\\WEB-INF\\lib\\spring-web-4.2.3.RELEASE.jar

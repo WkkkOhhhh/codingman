@@ -1,0 +1,20 @@
+package com.codingman.com.base_java.masterworker;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class Worker implements Runnable {
+	// 一个任务队列
+	protected Queue<Object> concurrentLinkedQueue;
+	// worker线程的结果集
+	protected Map<String, Thread> resultMap;
+
+	@Override
+	public void run() {
+
+	}
+
+}

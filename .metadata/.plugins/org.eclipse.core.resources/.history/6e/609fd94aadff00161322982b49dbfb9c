@@ -1,0 +1,25 @@
+package com.codingman.com.base_java.proclu;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Consumer implements Runnable {
+	private final BlockingQueue<Integer> blockingQueue;
+
+	public Consumer(BlockingQueue<Integer> blockingQueue) {
+		super();
+		this.blockingQueue = blockingQueue;
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			try {
+				Integer i=blockingQueue.take();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+}

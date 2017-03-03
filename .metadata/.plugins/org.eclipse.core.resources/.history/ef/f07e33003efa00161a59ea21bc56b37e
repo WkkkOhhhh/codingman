@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>cloudTutor</display-name>
+
+	<context-param>
+		<param-name>spring.profiles.active</param-name>
+		<param-value>prod</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:spring-mybatis.xml
+			classpath:spring-redis.xml
+			classpath:spring-shiro.xml
+		</param-value>
+	</context-param>
+
+	<!-- 编码过滤器 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>  
+            <param-name>targetFilterLifecycle</param-name>  
+            <param-value>true</param-value>  
+        </init-param> 
+	</filter>
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Spring监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 防止Spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<!-- Spring MVC servlet -->
+	<servlet>
+		<servlet-name>SpringMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SpringMVC</servlet-name>
+		<!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
+		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
+
+	<!-- CAS验证必须的监听器和过滤器，由CAS官方提供 -->
+	<!-- 用于单点退出，该过滤器用于实现单点登出功能，可选配置 -->
+	<listener>
+		<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+	</listener>
+	<!-- 该过滤器用于实现单点登出功能，可选配置。 -->
+	<filter>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 该过滤器负责用户的认证工作，必须启用 -->
+	<filter>
+		<filter-name>CASFilter</filter-name>
+		<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>casServerLoginUrl</param-name>
+			<!-- CAS 服务器登录地址 -->
+			<param-value>http://uc.casicloud.com/aopCasServer/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<!-- 本地客户端地址 这里是众创空间的域名 -->
+			<param-value>http://localhost:8080</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CASFilter</filter-name>
+		<url-pattern>/common/user/logincas.json</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CASFilter</filter-name>
+		<url-pattern>/logincas.do</url-pattern>
+	</filter-mapping>
+	<!-- 该过滤器负责对Ticket的校验工作，必须启用 -->
+	<filter>
+		<filter-name>CAS Validation Filter</filter-name>
+		<filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+		<init-param>
+			<param-name>casServerUrlPrefix</param-name>
+			<!-- CAS 服务器登录地址 -->
+			<param-value>http://uc.casicloud.com/aopCasServer</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<!-- 本地客户端地址 这里是众创空间域名 -->
+			<param-value>http://localhost:8080</param-value>
+		</init-param>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 该过滤器负责实现HttpServletRequest请求的包裹， 比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。 -->
+	<filter>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 该过滤器使得开发者可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。 比如AssertionHolder.getAssertion().getPrincipal().getName()。 -->
+	<filter>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 结束 -->
+
+	<!-- CAS登录和登出过滤器 由web客户端提供 前者用于接收CAS发送的用户名和密码，从而进行本系统(众创空间的验证) 后者用于从CAS单点登出 
+		需要众创空间根据需求修改其中的代码 -->
+	<filter>
+		<filter-name>casClientSessionFilter</filter-name>
+		<filter-class>com.inno.wd.filter.CasClientFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>casClientSessionFilter</filter-name>
+		<url-pattern>/common/user/logincas.json</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>casClientSessionFilter</filter-name>
+		<url-pattern>/logincas.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>casClientLogoutFilter</filter-name>
+		<filter-class>com.inno.wd.filter.CasLogoutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>casClientLogoutFilter</filter-name>
+		<url-pattern>/common/logout.do</url-pattern>
+	</filter-mapping>
+	<!-- 结束
+
+	<welcome-file-list>
+		<welcome-file>/common/home.do</welcome-file>
+	</welcome-file-list>
+	 -->
+</web-app>

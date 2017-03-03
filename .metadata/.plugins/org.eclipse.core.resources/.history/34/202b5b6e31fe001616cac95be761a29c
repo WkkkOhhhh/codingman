@@ -1,0 +1,8 @@
+package com.codingman.com.base_java.thread.demo2;
+
+public class HolderTest {
+	public Hold hold;
+public void initialize(){
+	hold=new Hold(42);
+}
+}

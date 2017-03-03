@@ -1,0 +1,10 @@
+package com.codingman.com.base_java.concurrent;
+
+/**
+ * sync是不可重入锁，此处证实
+ */
+public class TestReentrant {
+	public synchronized void doSomething() {
+		System.out.println("doSomething method");
+	}
+}

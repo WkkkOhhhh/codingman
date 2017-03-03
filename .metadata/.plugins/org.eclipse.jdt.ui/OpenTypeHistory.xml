@@ -3,4 +3,7 @@
 <typeInfo handle="=activemq_producer/D:\/apache-maven-3.3.9\/repo\/org\/apache\/activemq\/activemq-all\/5.13.0\/activemq-all-5.13.0.jar&lt;org.apache.activemq.spring(ActiveMQConnectionFactory.class[ActiveMQConnectionFactory" modifiers="33" timestamp="1484790641127"/>
 <typeInfo handle="=activemq_producer/D:\/apache-maven-3.3.9\/repo\/org\/apache\/activemq\/activemq-all\/5.13.0\/activemq-all-5.13.0.jar&lt;org.apache.activemq.jms.pool(PooledConnectionFactory.class[PooledConnectionFactory" modifiers="33" timestamp="1484790641127"/>
 <typeInfo handle="=activemq_consumer/D:\/jdk\/jre\/lib\/rt.jar&lt;com.sun.org.apache.xerces.internal.impl.dv.xs(BooleanDV.class[BooleanDV" modifiers="33" timestamp="1459390528232"/>
+<typeInfo handle="=base_java/D:\/jdk\/jre\/lib\/rt.jar&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1459390528232"/>
+<typeInfo handle="=activemq_consumer/D:\/jdk\/jre\/lib\/rt.jar&lt;java.util.concurrent.atomic(AtomicLong.class[AtomicLong" modifiers="33" timestamp="1459390528232"/>
+<typeInfo handle="=activemq_consumer/D:\/jdk\/jre\/lib\/rt.jar&lt;java.util(Vector.class[Vector" modifiers="33" timestamp="1459390528232"/>
 </typeInfoHistroy>

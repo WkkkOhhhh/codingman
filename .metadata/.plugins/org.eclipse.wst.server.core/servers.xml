@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/wechat-config" hostname="localhost" id="wechat" name="wechat" runtime-id="wechat" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="4">
+    <list key="modules" value0="wechat::org.eclipse.jst.j2ee.server:wechat::jst.web::2.3"/>
+  </server>
+</servers>

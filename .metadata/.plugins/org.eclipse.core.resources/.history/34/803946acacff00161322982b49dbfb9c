@@ -1,0 +1,14 @@
+package com.codingman.com.base_java.proclu;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Producter implements Runnable {
+	private final BlockingQueue<Product> blockingQueue;
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

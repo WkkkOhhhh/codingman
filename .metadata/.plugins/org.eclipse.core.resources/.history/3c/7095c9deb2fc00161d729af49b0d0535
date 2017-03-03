@@ -1,0 +1,25 @@
+package com.codingman.com.base_java.thread.demo1;
+
+import java.io.File;
+import java.io.PrintWriter;
+
+public class ThreadMain {
+	public static void main(String[] args) {
+		Thread[] threads=new Thread[10];
+		Thread.State[] status=new Thread.State[10];
+		for (int i = 0; i < 10; i++) {
+			threads[i]=new Thread(new Calculator(i));
+			if(i%2==0){
+				threads[i].setPriority(Thread.MAX_PRIORITY);
+			}else{
+				threads[i].setPriority(Thread.MIN_PRIORITY);
+			}
+			threads[i].setName("Thread:"+i);
+		}
+		PrintWriter pw=null;
+		File fule=new File("thread.txt");
+		pw.write);
+		for (int i = 0; i < 10; i++) {
+		}
+	}
+}

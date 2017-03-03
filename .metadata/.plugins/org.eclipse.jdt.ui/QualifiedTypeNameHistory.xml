@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.jms.ConnectionFactory"/>
-<fullyQualifiedTypeName name="javax.jms.Connection"/>
-<fullyQualifiedTypeName name="javax.jms.Session"/>
-<fullyQualifiedTypeName name="com.codingman.www.activemq_publish.publish.Publish.SinglePublish"/>
 <fullyQualifiedTypeName name="com.codingman.www.activemq_publish.publish.Publish"/>
 <fullyQualifiedTypeName name="org.apache.activemq.ActiveMQConnectionFactory"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
@@ -18,11 +14,8 @@
 <fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo3.Children"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo1.Cat"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo3.Parent"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo4.StaticIncr"/>
 <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
-<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.digui.demo1.Leaf"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.gc.demo1.Chair"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
@@ -32,4 +25,39 @@
 <fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo2.ParentPojo"/>
 <fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo2.ChildPojo"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.staticc.demo3.Cups"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.pojo.User"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo5.ChildP"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo5.ParentP"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo6.ParentStaticP"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo6.ChildStaticP"/>
+<fullyQualifiedTypeName name="com.sun.java.swing.plaf.windows.resources.windows"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo7.Wind"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.extend.demo7.Instrument"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.finall.Value"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.finall.TestFinal"/>
+<fullyQualifiedTypeName name="com.sun.media.jfxmedia.events.PlayerEvent"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.pleomorphic.Instrument"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.pleomorphic.Wins"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.loading.Candy"/>
+<fullyQualifiedTypeName name="sun.security.util.PropertyExpander.ExpandException"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.loading.Cookie"/>
+<fullyQualifiedTypeName name="javax.servlet.Servlet"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.thread.demo1.Calculator"/>
+<fullyQualifiedTypeName name="java.lang.Thread.State"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.concurrent.TestReentrant"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.concurrent.TestReentrantImpl"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.thread.demo2.Hold"/>
+<fullyQualifiedTypeName name="com.codingman.com.base_java.thread.demo2.HolderTest"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

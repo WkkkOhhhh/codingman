@@ -1,0 +1,13 @@
+package com.codingman.com.base_java.memory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Memoizerl<A, V> implements Computable<A, V>{
+private final Map<K, V> cache=new HashMap<K, V>();
+	@Override
+	public V compute(A arg) throws InterruptedException {
+		return null;
+	}
+
+}

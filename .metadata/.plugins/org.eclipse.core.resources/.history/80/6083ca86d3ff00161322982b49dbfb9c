@@ -1,0 +1,18 @@
+package com.codingman.com.base_java.masterworker;
+
+import java.util.Map;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Master master = new Master(new Worker(), 4);
+		for (int i = 0; i < 100; i++) {
+			master.submit(i);
+		}
+		master.execute();
+		Map<String, Object> resultMap = master.getResultMap();
+		while (en.hasMoreElements()) {
+			type type = (type) en.nextElement();
+			
+		}
+	}
+}

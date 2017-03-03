@@ -1,0 +1,16 @@
+package com.codingman.com.base_java.instance;
+
+import javax.print.attribute.standard.PrinterInfo;
+
+public class TestMain {
+public static void main(String[] args) {
+	Class c=null;
+	try {
+		c.forName("com.codingman.com.base_java.instance.FancyToy");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	printerInfo(c);
+}
+}
