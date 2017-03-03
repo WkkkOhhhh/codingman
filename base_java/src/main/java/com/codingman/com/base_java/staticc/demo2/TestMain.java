@@ -6,7 +6,8 @@ import com.codingman.com.base_java.staticc.demo1.StaticPojo;
  * */
 public class TestMain {
 	public static void main(String[] args) {
-		ParentPojo pp=new ChildPojo();
-		pp.sayHi();
+//		ParentPojo pp=new ChildPojo();
+//		pp.sayHi();
+		ChildPojo.sayHi();
 	}
 }
